@@ -18,8 +18,13 @@ study-planing-agent-web/
 |-- lab_agent.py
 |-- agent_memory.json
 |-- agent_output.txt
-`-- notes/
-    `-- week1.md
+|-- notes/
+|   `-- week1.md
+`-- docs/
+    |-- stakeholders.md
+    |-- requirements.md
+    |-- user-stories.md
+    `-- use-cases.md
 ```
 
 ## Week 1 - Git Collaboration and AI Agent Fundamentals
@@ -55,6 +60,10 @@ python3 lab_agent.py
 - `agent_output.txt` - file-system action produced by the agent
 - `notes/week1.md` - project artefact created/managed by the agent
 
+## Week 2 - Requirements Engineering
+
+Week 2 adds stakeholder analysis, functional and non-functional requirements, AI-agent boundaries, user stories, acceptance criteria, traceability, and a Mermaid use-case-style model. The artefacts are stored in `docs/`.
+
 ## Development Workflow
 
 The project uses `main` as the stable integrated branch.
@@ -75,10 +84,15 @@ main
 
 Do not begin a new laboratory from an old task branch.
 
+## Application Status
+
+The executable `lab_agent.py` application is unchanged from Week 1. Week 2 changes the specification and project documentation, not the implementation.
+
 ## Current Project Status
 
 - Week 1: completed - Git workflow and introductory agent simulator
-- Week 2: next - requirements engineering and use-case modeling
+- Week 2: completed - requirements engineering and use-case modeling
+- Week 3: next - UML structural modeling
 
 ## Course
 

@@ -15,12 +15,30 @@ The project is developed incrementally. Each laboratory adds software engineerin
 ```text
 study-planing-agent-web/
 |-- README.md
+|-- .gitignore
+|-- __init__.py
 |-- lab_agent.py
-|-- app.py
+|-- run.py
 |-- agent_memory.json
 |-- agent_output.txt
 |-- notes/
 |   `-- week1.md
+|-- domain/
+|   |-- __init__.py
+|   `-- models.py
+|-- ports/
+|   |-- __init__.py
+|   |-- calendar_port.py
+|   `-- memory_store.py
+|-- adapters/
+|   |-- __init__.py
+|   |-- fake_calendar.py
+|   `-- json_memory.py
+|-- agent/
+|   |-- __init__.py
+|   |-- states.py
+|   |-- planner.py
+|   `-- orchestrator.py
 `-- docs/
     |-- stakeholders.md
     |-- requirements.md
@@ -33,11 +51,17 @@ study-planing-agent-web/
     |   |-- object-diagram.md
     |   |-- database-diagram.md
     |   `-- package-diagram.md
-    `-- behavior/
+    |-- behavior/
+    |   |-- README.md
+    |   |-- activity-diagram.md
+    |   |-- state-machine-diagram.md
+    |   `-- sequence-diagram.md
+    `-- architecture/
         |-- README.md
-        |-- activity-diagram.md
-        |-- state-machine-diagram.md
-        `-- sequence-diagram.md
+        |-- system-architecture.md
+        |-- interfaces.md
+        |-- agent-architecture.md
+        `-- architecture-decisions.md
 ```
 
 ## Week 1 - Git Collaboration and AI Agent Fundamentals
@@ -85,6 +109,10 @@ Week 3 adds structural models and a small Python domain-model application. Merma
 
 Week 4 adds an executable planning workflow and three behavioral views of the same use case: an activity-style flowchart, a native Mermaid state machine, and a native Mermaid sequence diagram. The sequence model includes an AI-agent-style component calling a calendar tool and handling both success and failure.
 
+## Week 5 - Software Architecture
+
+Week 5 refactors the behavioral prototype into a small modular architecture. The project separates domain concepts, orchestration, planning, external ports, and concrete adapters. Mermaid diagrams document the decomposition and dependency direction.
+
 ## Development Workflow
 
 The project uses `main` as the stable integrated branch.
@@ -113,9 +141,10 @@ The executable `lab_agent.py` application is unchanged from Week 1. Week 2 chang
 
 - Week 1: completed - Git workflow and introductory agent simulator
 - Week 2: completed - requirements engineering and use-case modeling
-- Week 3: completed - structural modeling and Python domain model
-- Week 4: completed - behavioral modeling and executable agent/tool workflow
-- Week 5: next - architecture, interfaces, coupling/cohesion, and agent architecture
+- Week 3: completed - structural models and Python domain model
+- Week 4: completed - behavioral models and executable agent workflow
+- Week 5: completed - architectural decomposition, interfaces, coupling/cohesion, and agent architecture
+- Week 6: next - conceptual data model, relational design, normalization, and persistence
 
 ## Course
 

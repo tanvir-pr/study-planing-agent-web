@@ -19,21 +19,27 @@ study-planing-agent-web/
 |-- __init__.py
 |-- lab_agent.py
 |-- run.py
+|-- inspect_database.py
 |-- agent_memory.json
 |-- agent_output.txt
 |-- notes/
 |   `-- week1.md
+|-- db/
+|   `-- schema.sql
 |-- domain/
 |   |-- __init__.py
 |   `-- models.py
 |-- ports/
 |   |-- __init__.py
 |   |-- calendar_port.py
-|   `-- memory_store.py
+|   |-- memory_store.py
+|   `-- study_repository.py
 |-- adapters/
 |   |-- __init__.py
 |   |-- fake_calendar.py
-|   `-- json_memory.py
+|   |-- sqlite_database.py
+|   |-- sqlite_memory.py
+|   `-- sqlite_repository.py
 |-- agent/
 |   |-- __init__.py
 |   |-- states.py
@@ -56,12 +62,19 @@ study-planing-agent-web/
     |   |-- activity-diagram.md
     |   |-- state-machine-diagram.md
     |   `-- sequence-diagram.md
-    `-- architecture/
+    |-- architecture/
+    |   |-- README.md
+    |   |-- system-architecture.md
+    |   |-- interfaces.md
+    |   |-- agent-architecture.md
+    |   `-- architecture-decisions.md
+    `-- data-model/
         |-- README.md
-        |-- system-architecture.md
-        |-- interfaces.md
-        |-- agent-architecture.md
-        `-- architecture-decisions.md
+        |-- conceptual-model.md
+        |-- relational-schema.md
+        |-- normalization.md
+        |-- mapping.md
+        `-- queries.md
 ```
 
 ## Week 1 - Git Collaboration and AI Agent Fundamentals
@@ -113,6 +126,10 @@ Week 4 adds an executable planning workflow and three behavioral views of the sa
 
 Week 5 refactors the behavioral prototype into a small modular architecture. The project separates domain concepts, orchestration, planning, external ports, and concrete adapters. Mermaid diagrams document the decomposition and dependency direction.
 
+## Week 6 - Data Modeling and Persistence
+
+Week 6 maps the Study Planning Agent domain model to a normalized relational schema and adds an executable SQLite persistence adapter. Students, assignments, plans and plan items are stored as business data. Planning-request state, memory events and calendar tool calls demonstrate persistence for agent workflows.
+
 ## Development Workflow
 
 The project uses `main` as the stable integrated branch.
@@ -143,8 +160,9 @@ The executable `lab_agent.py` application is unchanged from Week 1. Week 2 chang
 - Week 2: completed - requirements engineering and use-case modeling
 - Week 3: completed - structural models and Python domain model
 - Week 4: completed - behavioral models and executable agent workflow
-- Week 5: completed - architectural decomposition, interfaces, coupling/cohesion, and agent architecture
-- Week 6: next - conceptual data model, relational design, normalization, and persistence
+- Week 5: completed - architectural decomposition and interfaces
+- Week 6: completed - conceptual data model, relational design, normalization and SQLite persistence
+- Week 7: next - coding standards, code review, branching and traceability
 
 ## Course
 

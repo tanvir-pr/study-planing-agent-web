@@ -16,6 +16,7 @@ The project is developed incrementally. Each laboratory adds software engineerin
 study-planing-agent-web/
 |-- README.md
 |-- lab_agent.py
+|-- app.py
 |-- agent_memory.json
 |-- agent_output.txt
 |-- notes/
@@ -24,7 +25,14 @@ study-planing-agent-web/
     |-- stakeholders.md
     |-- requirements.md
     |-- user-stories.md
-    `-- use-cases.md
+    |-- use-cases.md
+    `-- models/
+        |-- README.md
+        |-- use-case-diagram.md
+        |-- class-diagram.md
+        |-- object-diagram.md
+        |-- database-diagram.md
+        `-- package-diagram.md
 ```
 
 ## Week 1 - Git Collaboration and AI Agent Fundamentals
@@ -64,6 +72,10 @@ python3 lab_agent.py
 
 Week 2 adds stakeholder analysis, functional and non-functional requirements, AI-agent boundaries, user stories, acceptance criteria, traceability, and a Mermaid use-case-style model. The artefacts are stored in `docs/`.
 
+## Week 3 – UML Structural Modeling
+
+Week 3 adds structural models and a small Python domain-model application. Mermaid sources are stored in `docs/models/`, and `app.py` implements the same Student, Assignment, StudyPlan, and PlanItem concepts shown in the diagrams.
+
 ## Development Workflow
 
 The project uses `main` as the stable integrated branch.
@@ -92,7 +104,8 @@ The executable `lab_agent.py` application is unchanged from Week 1. Week 2 chang
 
 - Week 1: completed - Git workflow and introductory agent simulator
 - Week 2: completed - requirements engineering and use-case modeling
-- Week 3: next - UML structural modeling
+- Week 3: completed - structural modeling and Python domain model
+- Week 4: next - activity, state machine, sequence diagrams, and executable behavior
 
 ## Course
 
